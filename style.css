@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background-color: #050210;
+    height: 100vh;
+}
+
+.krug {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: linear-gradient(#fb5dad,#55fb9f,#b97aff);
+    animation: animacija 1s linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+@keyframes animacija {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.krug-2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: linear-gradient(#fb5dad,#55fb9f,#b97aff);
+    filter: blur(35px);
+}
+
+.puls {
+    position: relative;
+    border-radius: 50%;
+    background-color: #050210;
+    height: 260px;
+    width: 260px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.puls::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    background-color: #0e062b;
+    animation: blinking 1.1s linear infinite;
+}
+
+@keyframes blinking {
+    from {
+        transform: scale(0.8,0.8);
+    }
+    to {
+        transform: scale(10,10);
+    }
+}
